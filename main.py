@@ -66,6 +66,8 @@ def game_loop():
             elif (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
                 x_vel = -x_vel
                 y_vel = y_vel
+
+        # TODO: For some reason the ball can go through the middle?
         if ball.colliderect(right_paddle):
             x_vel = -x_vel
             if (right_paddle_y + (PADDLE_LENGTH / 2)) <= ball_y:
