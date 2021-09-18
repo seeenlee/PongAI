@@ -1,11 +1,22 @@
 import pygame
 pygame.init()
 
-screen = pygame.display.set_mode((1000, 600))
+# Resolution of Game window
+X_DIMENSION = 1000
+Y_DIMENSION = 600
+screen = pygame.display.set_mode((X_DIMENSION, Y_DIMENSION))
 pygame.display.set_caption("First Game")
+
+# values associated with all paddles
+PADDLE_LENGTH = 25
+PADDLE_WIDTH = 125
+
+# radius of ball
+RADIUS = 10
 
 
 def game_loop():
+
     # coordinates of ball
     ball_x = 500
     ball_y = 300
@@ -14,9 +25,6 @@ def game_loop():
     x_vel = 1
     y_vel = 1
 
-    # radius of ball
-    RADIUS = 10
-
     # coordinates of right paddle
     right_paddle_x = 925
     right_paddle_y = 250
@@ -24,10 +32,6 @@ def game_loop():
     # coordinates of left paddle
     left_paddle_x = 50
     left_paddle_y = 250
-
-    # values associated with all paddles
-    PADDLE_LENGTH = 25
-    PADDLE_WIDTH = 125
 
     loop = True
     clock = pygame.time.Clock()
