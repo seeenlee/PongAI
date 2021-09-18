@@ -5,7 +5,7 @@ import pygame
 pygame.init()
 
 screen = pygame.display.set_mode((1000, 600))
-pygame.display.set_caption("First Game")
+pygame.display.set_caption("Pong!")
 
 # values associated with all paddles
 PADDLE_WIDTH = 25
@@ -22,8 +22,8 @@ def game_loop():
     ball_y = 300
 
     # speed of ball
-    x_vel = -7
-    y_vel = 7
+    x_vel = -8
+    y_vel = 8
 
     # coordinates of right paddle
     right_paddle_x = 925
@@ -93,12 +93,32 @@ def game_loop():
 
         # AI
 
-        if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y:
-            left_paddle_y += 10
-        if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
-            left_paddle_y -= 10
+        if (x_vel < 0) and (ball_x > 500):
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y:
+                left_paddle_y += 3
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
+                left_paddle_y -= 3
+        elif ball_y < 100 or ball_y > 500:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y:
+                left_paddle_y += 3
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
+                left_paddle_y -= 3
+        elif x_vel < 0:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y:
+                left_paddle_y += 5
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
+                left_paddle_y -= 5
+        else:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y:
+                left_paddle_y += 8
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
+                left_paddle_y -= 8
 
-
+        # bot tester
+        # if (right_paddle_y + (PADDLE_LENGTH / 2)) < ball_y:
+        #     right_paddle_y += 10
+        # if (right_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
+        #     right_paddle_y -= 10
         # game quit
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
