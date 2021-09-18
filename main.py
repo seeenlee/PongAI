@@ -16,6 +16,8 @@ leftPaddleY = 250
 rightPaddleX = 925
 rightPaddleY = 250
 
+# hi my name is sean
+
 def game_loop():
     ballX = 500
     ballY = 300
