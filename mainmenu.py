@@ -76,6 +76,7 @@ def main_menu():
         for event in pygame.event.get():  # letting game quit when inputted
             if event.type == pygame.QUIT:
                 intro = False
+                sys.exit(0)
             elif event.type == pygame.MOUSEMOTION:  # detecting mouse motion
                 mx, my = event.pos  # getting position when mouse motion detected
                 if instructions_box.collidepoint(mx, my):  # highlighting text when mouse touches rectangle
