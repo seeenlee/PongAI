@@ -526,7 +526,7 @@ def multiplayer():
 
     # speed of ball
     x_vel = 10
-    y_vel = 6
+    y_vel = 8
 
     # coordinates of right paddle
     right_paddle_x = 925
@@ -576,7 +576,7 @@ def multiplayer():
             ball_x = 500
             ball_y = 300
             x_vel = 10
-            y_vel = 6
+            y_vel = 8
 
             # TODO: move the ball to the middle before it freezes
             time.sleep(1)
