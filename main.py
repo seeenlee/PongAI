@@ -151,24 +151,24 @@ def survival():
         # AI
 
         if (x_vel < 0) and (ball_x > 500):
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y - random.randint(0, 60):
                 left_paddle_y += 3
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y + random.randint(0, 60):
                 left_paddle_y -= 3
         elif ball_y < 100 or ball_y > 500:
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y - random.randint(0, 60):
                 left_paddle_y += 3
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y + random.randint(0, 60):
                 left_paddle_y -= 3
         elif x_vel < 0:
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y + random.randint(0, 60):
                 left_paddle_y += 5
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y - random.randint(0, 60):
                 left_paddle_y -= 5
         else:
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y - random.randint(0, 60):
                 left_paddle_y += 8
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y + random.randint(0, 60):
                 left_paddle_y -= 8
 
         # bot tester
@@ -482,24 +482,24 @@ def bot_mode():
         # AI
 
         if (x_vel < 0) and (ball_x > 500):
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y - random.randint(0, 60):
                 left_paddle_y += 3
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y + random.randint(0, 60):
                 left_paddle_y -= 3
         elif ball_y < 100 or ball_y > 500:
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y - random.randint(0, 60):
                 left_paddle_y += 3
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y + random.randint(0, 60):
                 left_paddle_y -= 3
         elif x_vel < 0:
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y + random.randint(0, 60):
                 left_paddle_y += 5
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y - random.randint(0, 60):
                 left_paddle_y -= 5
         else:
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y - random.randint(0, 60):
                 left_paddle_y += 8
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y + random.randint(0, 60):
                 left_paddle_y -= 8
 
         # bot tester
@@ -820,24 +820,24 @@ def singleplayer_easy():
         # AI
 
         if (x_vel < 0) and (ball_x > 500):
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y - random.randint(0, 60):
                 left_paddle_y += 3
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y + random.randint(0, 60):
                 left_paddle_y -= 3
         elif ball_y < 100 or ball_y > 500:
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y - random.randint(0, 60):
                 left_paddle_y += 3
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y + random.randint(0, 60):
                 left_paddle_y -= 3
         elif x_vel < 0:
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y + random.randint(0, 60):
                 left_paddle_y += 5
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y - random.randint(0, 60):
                 left_paddle_y -= 5
         else:
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y - random.randint(0, 60):
                 left_paddle_y += 8
-            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
+            if (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y + random.randint(0, 60):
                 left_paddle_y -= 8
 
         # bot tester
