@@ -405,8 +405,8 @@ def bot_mode():
         if ball_x < RADIUS or ball_x > 1000 - RADIUS:
             ball_x = 500
             ball_y = 300
-            x_vel = -7
-            y_vel = 7
+            x_vel = -8
+            y_vel = 8
             if ball_x < RADIUS:
                 player2_score += 1
             else:
@@ -881,8 +881,8 @@ def singleplayer_hard():
     ball_y = 300
 
     # speed of ball
-    x_vel = 16
-    y_vel = 6
+    x_vel = 12
+    y_vel = 10
 
     # coordinates of right paddle
     right_paddle_x = 925
@@ -930,8 +930,8 @@ def singleplayer_hard():
                 print('this is not working')
             ball_x = 500
             ball_y = 300
-            x_vel = 16
-            y_vel = 7
+            x_vel = 12
+            y_vel = 10
             # TODO: move the ball to the middle before it freezes
             time.sleep(1)
 
@@ -1042,7 +1042,7 @@ def singleplayer_hard():
 
 # survival()
 # training()
-multiplayer()
+# multiplayer()
 # bot_mode()
 # singleplayer_easy()
-# singleplayer_hard()
+singleplayer_hard()
