@@ -700,7 +700,7 @@ def bot_mode():
                 elif y_vel == 0:
                     y_vel = 8
             elif right_paddle_y + 3 * (PADDLE_LENGTH / 5) >= ball_y:
-                i = random.randint(0, 5)
+                i = random.randint(-8, 8)
                 y_vel = i
 
             elif right_paddle_y + 4 * (PADDLE_LENGTH / 5) >= ball_y:
