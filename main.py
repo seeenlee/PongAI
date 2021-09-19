@@ -225,21 +225,25 @@ def multiplayer():
         ball = pygame.draw.circle(screen, (255, 255, 255), (ball_x, ball_y), RADIUS)
 
         # Dividing the paddle
-        ball1 = pygame.draw.circle(screen, (255, 0, 0), (925, right_paddle_y + 25), 3)
-        ball2 = pygame.draw.circle(screen, (255, 0, 0), (925, right_paddle_y + 50), 3)
-        ball3 = pygame.draw.circle(screen, (255, 0, 0), (925, right_paddle_y + 75), 3)
-        ball4 = pygame.draw.circle(screen, (255, 0, 0), (925, right_paddle_y + 100), 3)
+        # ball1 = pygame.draw.circle(screen, (255, 0, 0), (925, right_paddle_y + 25), 3)
+        # ball2 = pygame.draw.circle(screen, (255, 0, 0), (925, right_paddle_y + 50), 3)
+        # ball3 = pygame.draw.circle(screen, (255, 0, 0), (925, right_paddle_y + 75), 3)
+        # ball4 = pygame.draw.circle(screen, (255, 0, 0), (925, right_paddle_y + 100), 3)
 
         # border boundaries
         if ball_x < RADIUS or ball_x > 1000 - RADIUS:
+            if ball_x < RADIUS:
+                player2_score += 1
+            elif ball_x > 900:
+                player1_score += 1
+
+            else:
+                print('this is not working')
             ball_x = 500
             ball_y = 300
             x_vel = -7
             y_vel = 7
-            if ball_x < RADIUS:
-                player2_score += 1
-            else:
-                player1_score += 1
+
             # TODO: move the ball to the middle before it freezes
             time.sleep(1)
 
@@ -394,21 +398,23 @@ def singleplayer_easy():
         ball = pygame.draw.circle(screen, (255, 255, 255), (ball_x, ball_y), RADIUS)
 
         # Dividing the paddle
-        ball1 = pygame.draw.circle(screen, (255, 0, 0), (925, right_paddle_y + 25), 3)
-        ball2 = pygame.draw.circle(screen, (255, 0, 0), (925, right_paddle_y + 50), 3)
-        ball3 = pygame.draw.circle(screen, (255, 0, 0), (925, right_paddle_y + 75), 3)
-        ball4 = pygame.draw.circle(screen, (255, 0, 0), (925, right_paddle_y + 100), 3)
+        # ball1 = pygame.draw.circle(screen, (255, 0, 0), (925, right_paddle_y + 25), 3)
+        # ball2 = pygame.draw.circle(screen, (255, 0, 0), (925, right_paddle_y + 50), 3)
+        # ball3 = pygame.draw.circle(screen, (255, 0, 0), (925, right_paddle_y + 75), 3)
+        # ball4 = pygame.draw.circle(screen, (255, 0, 0), (925, right_paddle_y + 100), 3)
 
         # border boundaries
         if ball_x < RADIUS or ball_x > 1000 - RADIUS:
+            if ball_x < RADIUS:
+                player2_score += 1
+            elif ball_x > 900:
+                player1_score += 1
+            else:
+                print('this is not working')
             ball_x = 500
             ball_y = 300
             x_vel = -7
             y_vel = 7
-            if ball_x < RADIUS:
-                player2_score += 1
-            else:
-                player1_score += 1
             # TODO: move the ball to the middle before it freezes
             time.sleep(1)
 
@@ -421,17 +427,13 @@ def singleplayer_easy():
             if (left_paddle_y + (PADDLE_LENGTH / 2)) < ball_y:
                 if y_vel < 0:
                     y_vel *= 1
-                    print('same slope')
                 else:
                     y_vel = -y_vel
-                    print('changed slope')
             elif (left_paddle_y + (PADDLE_LENGTH / 2)) > ball_y:
                 if y_vel > 0:
                     y_vel *= 1
-                    print('same slope')
                 else:
                     y_vel = -y_vel
-                    print('change slope')
 
             else:
                 print('why are you here')
@@ -457,7 +459,8 @@ def singleplayer_easy():
                 elif y_vel == 0:
                     y_vel = 8
             elif right_paddle_y + 3 * (PADDLE_LENGTH / 5) >= ball_y:
-                y_vel = 0.1
+                i = random.randint(0, 5)
+                y_vel = i
             elif right_paddle_y + 4 * (PADDLE_LENGTH / 5) >= ball_y:
                 if y_vel > 0:
                     y_vel = -y_vel
@@ -519,5 +522,5 @@ def singleplayer_easy():
         clock.tick(60)
 
 # multiplayer()
-# bot_mode()
+bot_mode()
 # singleplayer_easy()
