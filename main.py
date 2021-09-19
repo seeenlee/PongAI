@@ -519,5 +519,5 @@ def singleplayer_easy():
         clock.tick(60)
 
 # multiplayer()
-bot_mode()
+# bot_mode()
 # singleplayer_easy()
