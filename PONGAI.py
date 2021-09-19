@@ -1,7 +1,4 @@
-import random
-import time
-
-import pygame, sys
+import random,time, pygame, sys
 
 pygame.init()
 
@@ -68,13 +65,13 @@ def single_player():
                     hard = font.render("HARD", True, (255, 255, 255))
                     screen.blit(hard, (500 - back.get_width() // 2, 425 - back.get_height() // 2))
 
-                click = pygame.mouse.get_pressed()
-                if click[0] == 1 and 10 < mx < 80 and 520 < my < 590:  # if instructions is clicked, instructions pops up
-                    modes()
-                if click[0] == 1 and 450 < mx < 550 and 145 < my < 205:  # easy mode
-                    singleplayer_easy()
-                if click[0] == 1 and 450 < mx < 550 and 395 < my < 4550:  # hard mode
-                    singleplayer_hard()
+            click = pygame.mouse.get_pressed()
+            if click[0] == 1 and 10 < mx < 80 and 520 < my < 590:  # if instructions is clicked, instructions pops up
+                modes()
+            if click[0] == 1 and 450 < mx < 550 and 145 < my < 205:  # easy mode
+                singleplayer_easy()
+            if click[0] == 1 and 450 < mx < 550 and 395 < my < 4550:  # hard mode
+                singleplayer_hard()
 
             pygame.display.flip()
             pygame.display.update()
@@ -150,19 +147,19 @@ def modes():
                     sm = font.render("SURVIVAL", True, (255, 255, 255))
                     screen.blit(sm, (475 - back.get_width() // 2, 500 - back.get_height() // 2))
 
-                click = pygame.mouse.get_pressed()
-                if click[0] == 1 and 10 < mx < 80 and 520 < my < 590:  # if instructions is clicked, instructions pops up
-                    main_menu()
-                elif click[0] == 1 and 450 < mx < 550 and 70 < my < 130:  # single player
-                    single_player()
-                elif click[0] == 1 and 450 < mx < 550 and 170 < my < 230:  # multiplayer
-                    multiplayer()
-                elif click[0] == 1 and 450 < mx < 550 and 270 < my < 330:  # computer only
-                    bot_mode()
-                elif click[0] == 1 and 450 < mx < 550 and 370 < my < 430:  # training
-                    training()
-                elif click[0] == 1 and 450 < mx < 550 and 470 < my < 530:  # survival
-                    survival()
+            click = pygame.mouse.get_pressed()
+            if click[0] == 1 and 10 < mx < 80 and 520 < my < 590:  # if instructions is clicked, instructions pops up
+                main_menu()
+            elif click[0] == 1 and 450 < mx < 550 and 70 < my < 130:  # single player
+                single_player()
+            elif click[0] == 1 and 450 < mx < 550 and 170 < my < 230:  # multiplayer
+                multiplayer()
+            elif click[0] == 1 and 450 < mx < 550 and 270 < my < 330:  # computer only
+                bot_mode()
+            elif click[0] == 1 and 450 < mx < 550 and 370 < my < 430:  # training
+                training()
+            elif click[0] == 1 and 450 < mx < 550 and 470 < my < 530:  # survival
+                survival()
 
             pygame.display.flip()
             pygame.display.update()
@@ -256,12 +253,11 @@ def main_menu():
                     enter = font.render("PLAY", True, (255, 255, 255))
                     screen.blit(enter,
                                 (475 - enter.get_height() // 2, 425 - enter.get_height() // 2))
-                click = pygame.mouse.get_pressed()  # detecting mouse input
-                if click[0] == 1 and 450 < mx < 550 and 450 < my < 530:  # if instructions is clicked, instructions pops up
-                    instr()
-                elif click[0] == 1 and 450 < mx < 500 and 400 < my < 450:  # if play is clicked, difficulty function called
-                    print("play")
-                    modes()
+            click = pygame.mouse.get_pressed()  # detecting mouse input
+            if click[0] == 1 and 450 < mx < 550 and 450 < my < 530:  # if instructions is clicked, instructions pops up
+                instr()
+            elif click[0] == 1 and 450 < mx < 500 and 400 < my < 450:  # if play is clicked, difficulty function called
+                modes()
 
             clock.tick(60)
             pygame.display.update()
@@ -1296,7 +1292,6 @@ def singleplayer_hard():
 
 
 main_menu()
-
 pygame.quit()
 # survival()
 # training()
