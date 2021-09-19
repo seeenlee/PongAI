@@ -191,7 +191,7 @@ def instr():
             font = pygame.font.SysFont("arial", 25)
             instructions_A = "Move your paddle with the up and down arrow keys on your device. "
             instructions_B = "Hit the ball past your opponent to score a point! "
-            instructions_C =  "First to 10 wins! Good Luck!"
+            instructions_C =  "There are modes. Good Luck!"
             a = font.render(instructions_A, True, (255, 255, 255))  # assigning colors
             b = font.render(instructions_B, True, (255, 255, 255))
             c = font.render(instructions_C, True, (255, 255, 255))
