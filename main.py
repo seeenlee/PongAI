@@ -14,6 +14,11 @@ PADDLE_LENGTH = 125
 # radius of ball
 RADIUS = 10
 
+global font
+font = pygame.font.SysFont("arial", 30)
+
+def write(text,location,color=(255,255,255)):
+    screen.blit(font.render(text,True,color),location)
 
 def game_loop():
 
@@ -36,7 +41,17 @@ def game_loop():
     loop = True
     clock = pygame.time.Clock()
 
+    player1_score = 0
+    player2_score = 0
+
+
     while loop:
+
+        # score calculation
+        score_count = "Player 1: " + str(player1_score) + "          " + "Player 2: " + str(player2_score)
+        write(score_count, (300,10))
+
+
         ball_x -= x_vel
         ball_y -= y_vel
         # setup of objects
@@ -52,6 +67,10 @@ def game_loop():
             ball_y = 300
             x_vel = -7
             y_vel = 7
+            if ball_x < RADIUS:
+                player2_score += 1
+            else:
+                player1_score += 1
             # TODO: move the ball to the middle before it freezes
             time.sleep(1)
 
